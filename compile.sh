@@ -24,5 +24,6 @@ cp out/arch/arm64/boot/Image.gz-dtb ../AnyKernel3/
 cd ../AnyKernel3
 
 date=`date '+%Y-%m-%d_%H:%M'`
+date="${date//:}"
 
 zip -r9 kernel-$date.zip * -x README.md kernel-$date.zip
