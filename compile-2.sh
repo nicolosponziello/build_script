@@ -3,6 +3,7 @@ export CROSS_COMPILE_ARM32=~/Desktop/kernel/arm-eabi-gcc-9.x/bin/arm-eabi-
 
 export ARCH=arm64
 export SUBARCH=arm64
+
 #build
 mkdir -p out
 make O=out clean
@@ -15,10 +16,12 @@ rm ~/Desktop/kernel/AnyKernel3/kernel*
 cp out/arch/arm64/boot/Image.gz-dtb ~/Desktop/kernel/AnyKernel3/
 
 cd ~/Desktop/kernel/AnyKernel3
+
 if [[ ! -f ./Image* ]]; then
 	echo "Kernel image file not found"
 	exit 1
 fi
+
 
 date=`date '+%Y-%m-%d_%H:%M'`
 date="${date//:}"
