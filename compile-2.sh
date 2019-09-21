@@ -1,6 +1,7 @@
 export CROSS_COMPILE=~/Desktop/kernel/aarch64-elf-gcc-9.x/bin/aarch64-elf-
 export CROSS_COMPILE_ARM32=~/Desktop/kernel/arm-eabi-gcc-9.x/bin/arm-eabi-
 
+
 export ARCH=arm64
 export SUBARCH=arm64
 
@@ -21,7 +22,6 @@ if [[ ! -f ./Image* ]]; then
 	echo "Kernel image file not found"
 	exit 1
 fi
-
 
 date=`date '+%Y-%m-%d_%H:%M'`
 date="${date//:}"
