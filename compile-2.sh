@@ -18,7 +18,7 @@ cp out/arch/arm64/boot/Image.gz-dtb ~/Desktop/kernel/AnyKernel3/
 
 cd ~/Desktop/kernel/AnyKernel3
 
-if [[ ! -f ./Image* ]]; then
+if [ ! -f "./Image.gz-dtb" ]; then
 	echo "Kernel image file not found"
 	exit 1
 fi
